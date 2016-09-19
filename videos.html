@@ -1,0 +1,73 @@
+
+
+<div class="resizeheader"></div>
+
+<!-- Content Heding -->
+<div class="content-heading">
+    <h4>VIDEOS</h4>
+    <i class="fa fa-video-camera"></i>
+    <div class="overlay"></div>
+    <img src="images/pictures/fond_header.png" alt="img">
+</div>
+
+
+<!-- Page Content-->
+<div class="content">
+    <div class="container">
+        <div>
+            <h2>Vidéos du PALAM</h2>
+            <div class="decoration"></div>
+            <div style="display: none" id="fromdb">
+
+            </div>
+            
+        </div>
+        <div class="text-danger bold" id="nointernet">
+            Merci d'activer votre connexion internet pour avoir les dernières informations.                                                 
+        </div>
+
+        <script type="text/javascript">
+            if (conn) {
+                jQuery("#playlist").load('<iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/coXmKnIYbYk?list=UUpOWp9SY5fJgcgp_rSABA4Q" frameborder="0" allowfullscreen></iframe>');
+                jQuery("#nointernet").hide();
+                jQuery("#fromdb").show();
+                jQuery("#fromdb").append('<div style="text-align: center"><img  src="images/load.gif"  style="width: 100%" /></div>');
+                jQuery("#fromdb").load("http://palam.noflay.com/maj.php?category=videos");
+            }
+        </script> 
+    </div>
+    <div class="decoration"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

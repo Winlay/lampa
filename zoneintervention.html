@@ -1,0 +1,89 @@
+
+
+<div class="resizeheader"></div>
+
+<!-- Content Heding -->
+<div class="content-heading">
+    <h4>Zone d'intervention</h4>
+    <i class="fa fa-map-marker"></i>
+    <div class="overlay"></div>
+    <img src="images/pictures/fond_header.png" alt="img">
+</div>
+
+
+<!-- Page Content-->
+<div class="content">
+    <div class="decoration" style="margin-bottom: 30px;"></div>
+    <div class="container">
+        <div>
+            <div class="sidebar-right-big">
+                <div class="decoration"></div>
+                <div class="field-item even" property="content:encoded">
+                    <p style="text-align: justify">
+                        Le choix des régions s’est effectué sur la base du croisement de la carte de pauvreté avec celle de l’analphabétisme et de la scolarisation. Les régions retenues étaient Kaolack (avant l’érection du département de Kaffrine en région signalé comme étant le plus pauvre des autres départements de Kaolack) et Diourbel qui sont caractérisées par :
+                    <ul><li>l’acuité de la pauvreté, 
+                        </li><li>un taux brut de scolarisation bas, 
+                        </li><li>un fort taux d’analphabétisme (55 et 54% respectivement à Diourbel et Kaolack pour un taux d’analphabétisme de 59% national au niveau national), 
+                        </li><li>la faiblesse de l’intervention des partenaires techniques et financiers comparativement à d’autres régions.
+                        </li></ul>
+                    <br/>L’affinement de ces critères a permis de sélectionner quinze (15) communes dans les régions de Kaffrine et de Diourbel (voir tableau ci-dessous)
+                    <br/>Le même processus a conduit, suite à l’étude du Milieu, à élaborer la situation de référence de ces communes et aboutir à la sélection des 281 villages dont 122 à Kaffrine et 159 à Diourbel
+                    </p>
+                </div>
+                <div class="decoration"></div>
+                <p style="text-align: justify">Tableau de répartition des villages et des bénéficiaires par composante et par région</p>
+                <img src="images/benef1.jpg" class="responsive-image" alt="img">
+                <img src="images/benef2.png" class="responsive-image" alt="img">
+                <img src="images/zoneintervenetion.png" class="responsive-image" alt="img">
+            </div>
+        </div>
+        <div class="text-danger bold" id="nointernet">
+            Merci d'activer votre connexion internet pour avoir les dernières informations.                                                 
+        </div>
+        <div style="display: none" id="fromdb">
+
+        </div>
+        <script type="text/javascript">
+            if (conn) {
+                jQuery("#nointernet").hide();
+                jQuery("#fromdb").show();
+                jQuery("#fromdb").append('<div style="text-align: center"><img  src="images/load.gif"  style="width: 100%" /></div>');
+                jQuery("#fromdb").load("http://palam.noflay.com/maj.php?category=zonesintervention");
+            }
+        </script>
+    </div>
+    <div class="decoration"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

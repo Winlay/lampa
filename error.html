@@ -1,0 +1,152 @@
+<!DOCTYPE HTML><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/splash/splash-icon.png">
+    <link rel="apple-touch-startup-image" href="images/splash/splash-screen.png" 			media="screen and (max-device-width: 320px)" />
+    <link rel="apple-touch-startup-image" href="images/splash/splash-screen@2x.png" 		media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" sizes="640x1096" href="images/splash/splash-screen@3x.png" />
+    <link rel="apple-touch-startup-image" sizes="1024x748" href="images/splash/splash-screen-ipad-landscape" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)" />
+    <link rel="apple-touch-startup-image" sizes="768x1004" href="images/splash/splash-screen-ipad-portrait.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)" />
+    <link rel="apple-touch-startup-image" sizes="1536x2008" href="images/splash/splash-screen-ipad-portrait-retina.png"   media="(device-width: 768px)	and (orientation: portrait)	and (-webkit-device-pixel-ratio: 2)"/>
+    <link rel="apple-touch-startup-image" sizes="1496x2048" href="images/splash/splash-screen-ipad-landscape-retina.png"   media="(device-width: 768px)	and (orientation: landscape)	and (-webkit-device-pixel-ratio: 2)"/>
+
+    <title>PALAM</title>
+
+    <link href="css/framework.css" 		 rel="stylesheet" type="text/css">
+    <link href="css/style.css"     		 rel="stylesheet" type="text/css">
+    <link href="css/owl.theme.css" 		 rel="stylesheet" type="text/css">
+    <link href="css/swipebox.css"		 rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css"	 rel="stylesheet" type="text/css">
+    <link href="css/animate.css"			 rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jqueryui.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/framework.plugins.js"></script>
+    <script type="text/javascript" src="js/PhoneDialer.js"></script>
+    <script type="text/javascript">
+        function loadContent(url) {
+            jQuery('#content').load(url);
+        }
+    </script>
+
+</head>
+<body>
+
+    <!--    <div id="preloader">
+            <div id="status">
+                <p class="center-text">
+                    Chargement en cours...
+                </p>
+            </div>
+        </div>-->
+
+    <div class="all-elements">
+        <div class="snap-drawers">
+            <!-- Left Sidebar-->
+            <div class="snap-drawer snap-drawer-left">
+                <div class="sidebar-header">
+                    <a href="#" class="sidebar-logo"><h2 style="color: #27AE60">PALAM</h2></a>
+                    <a href="#" class="sidebar-logo-close"><i class="fa fa-times default-color"></i></a>
+                </div>
+                <div class="clear"></div>
+                <ul class="sidebar-navigation full-bottom">
+                    <li><a  class="ajax-menu" onclick="loadContent('1.html');"><i class="fa fa-bolt"></i><em>SEEG MOBILEDAN</em></a></li>
+                    <li><a  class="ajax-menu" onclick="loadContent('2.html');"><i class="fa fa-refresh"></i><em>Recharge prépayée</em></a></li>
+                    <li><a  class="ajax-menu" onclick="loadContent('3.html');"><i class="fa fa-ticket"></i><em>Paiement de facture</em></a></li>
+                    <li><a  class="ajax-menu" onclick="loadContent('4.html');"><i class="fa fa-money"></i><em>Paiement commerçant</em></a></li>
+                    <li><a  class="ajax-menu" onclick="loadContent('5.html');"><i class="fa fa-tachometer"></i><em>Consultaton de solde</em></a></li>
+                    <li><a  class="ajax-menu" onclick="loadContent('6.html');"><i class="fa fa-sign-out"></i><em>Retrait</em></a></li>
+                    <li><a  class="ajax-menu" onclick="loadContent('7.html');"><i class="fa fa-random"></i><em>Transfert</em></a></li>
+                    <li><a  class="ajax-menu" onclick="loadContent('8.html');"><i class="fa fa-file-text"></i><em>Consultation des transactions</em></a></li>
+                    <li><a  class="ajax-menu" onclick="loadContent('9.html');"><i class="fa fa-cog"></i><em>Préferences</em></a></li>
+                    <li><a  class="ajax-menu" onclick="loadContent('10.html');"><i class="fa fa-info-circle"></i><em>A propos</em></a></li>
+                    <li><a onclick="app.exitApp();"><i class="fa fa-times-circle"></i><em>Quitter</em></a></li>
+                </ul>
+                <div class="sidebar-decoration"></div>
+
+                <div class="sidebar-decoration"></div>
+                <p class="sidebar-copyright">Copyright BICIG 2015. All rights reserved.</p>
+            </div>
+            <!-- Right Sidebar -->
+            <div class="snap-drawer snap-drawer-right">
+                <div class="sidebar-header">
+                    <a href="#" class="sidebar-logo"></a>
+                    <a href="#" class="sidebar-logo-close"><i class="fa fa-times"></i></a>
+                </div>
+
+                <div class="sidebar-decoration"></div>
+                <p class="sidebar-copyright">Copyright BICIG 2015. All rights reserved.</p>
+            </div>
+        </div>
+
+        <div class="page-header">
+            <a href="#" class="open-left"><i class="fa fa-navicon"></i></a>
+            <a onclick="loadContent('index_ajax.html')" class="page-logo">
+            </a>
+        </div>
+
+        <!-- Page Content-->
+        <div id="content" class="snap-content">
+
+            <div class="header-menu">
+                <div>
+                    <div class="staff-item">
+
+                        <p style="color: #000000; text-align: center;">
+
+                            <span class="fs20 text-danger">ERREUR DE CHARGEMENT</span>
+                            <br/>
+                            <span class="fs20 text-danger">Merci de contacter votre service client</span>
+                            <br/>
+                            <img src="images/error.jpg" />
+                            <a onclick="loadContent('index_ajax.html')" >Aller à l'accueil</a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Footer-->
+            <div class="footer">
+                <p class="center-text bold default-color">Copyright PALAM 2015. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
