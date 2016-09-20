@@ -57,6 +57,7 @@
     <allow-intent href="mailto:*" />
     <gap:plugin name="br.com.paveisitemas.splashscreen" version="2.1.1" />
     <plugin name="io.litehelpers.cordova.sqlite" spec="0.7.10" source="pgb" />
+    <plugin name="com.capgemini.plugins.toast" spec="2.0.2" source="pgb" />
     <!--<gap:plugin name="com.phonegap.core.phonedialer"  />-->
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <!--<gap:plugin name="com.adobe.plugins.gaplugin" version="2.4.0" />-->

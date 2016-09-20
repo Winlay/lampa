@@ -107,7 +107,7 @@
                 DB.transaction(function (tx) {
                     tx.executeSql(SQLUPDATE, [langue],
                             function (tx, result) {
-                                window.plugins.toast.showLongCenter(' langue mise à jour en ' + langue);
+                                window.plugins.toast.showLongCenter('Langue mise à jour en ' + langue);
                             },
                             function (error) {
 
