@@ -70,10 +70,13 @@
                 margin-left: 5px;
             }
             .content {
-    clear: both;
-    margin-left: 15px;
-    margin-right: 15px;
-}
+                clear: both;
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            .hidden{
+                display: none;
+            }
         </style>
 
         <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -129,22 +132,38 @@
                     </div>
                     <div class="clear"></div>
                     <ul class="sidebar-navigation full-bottom">
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('motministre.html');"><i class="fa fa-female"></i><em>Mot de Mme le Ministre</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('motdirectrice.html');"><i class="fa fa-comment"></i><em>Mot de la directrice</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('contexte.html');"><i class="fa fa-arrows"></i><em>Contexte</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('objectif.html');"><i class="fa fa-crosshairs"></i><em>Objectifs poursuivis</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('zoneintervention.html');"><i class="fa fa-map-marker"></i><em>Zone d'intervention</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('cadre.html');"><i class="fa fa-gavel"></i><em>Cadre intitutionel</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('strategie.html');"><i class="fa fa-magic"></i><em>Stratégie d'intervention</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('realisations.html');"><i class="fa fa-thumbs-up"></i><em>Réalisations</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('germes.html');"><i class="fa fa-refresh"></i><em>Germes de changement</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('experience.html');"><i class="fa fa-thumbs-up"></i><em>Experiences capitalisées</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('perspectives.html');"><i class="fa fa-dot-circle-o"></i><em>Défis et perspectives</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('conclusion.html');"><i class="fa fa-compress"></i><em>Conclusion</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('temoignages.html');"><i class="fa fa-comments-o"></i><em>Témoignages</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('galerie.html');"><i class="fa fa-photo"></i><em>Galerie</em></a></li>
-                        <li><a  class="ajax-menu cursor" onclick="loadContent('videos.html');"><i class="fa fa-video-camera"></i><em>Vidéos</em></a></li>
-                        <li><a onclick="quitter()"><i class="fa fa-times-circle"></i><em>Quitter</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('motministre.html');"><i class="fa fa-female"></i><em>Mot de Mme le Ministre</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('motdirectrice.html');"><i class="fa fa-comment"></i><em>Mot de la directrice</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('contexte.html');"><i class="fa fa-arrows"></i><em>Contexte</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('objectif.html');"><i class="fa fa-crosshairs"></i><em>Objectifs poursuivis</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('zoneintervention.html');"><i class="fa fa-map-marker"></i><em>Zone d'intervention</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('cadre.html');"><i class="fa fa-gavel"></i><em>Cadre intitutionel</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('strategie.html');"><i class="fa fa-magic"></i><em>Stratégie d'intervention</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('realisations.html');"><i class="fa fa-thumbs-up"></i><em>Réalisations</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('germes.html');"><i class="fa fa-refresh"></i><em>Germes de changement</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('experience.html');"><i class="fa fa-thumbs-up"></i><em>Experiences capitalisées</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('perspectives.html');"><i class="fa fa-dot-circle-o"></i><em>Défis et perspectives</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('conclusion.html');"><i class="fa fa-compress"></i><em>Conclusion</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('temoignages.html');"><i class="fa fa-comments-o"></i><em>Témoignages</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('galerie.html');"><i class="fa fa-photo"></i><em>Galerie</em></a></li>
+                        <li class="fr"><a  class="ajax-menu cursor" onclick="loadContent('videos.html');"><i class="fa fa-video-camera"></i><em>Vidéos</em></a></li>
+                        <li class="fr"><a onclick="quitter()"><i class="fa fa-times-circle"></i><em>Quitter</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('motministre.html');"><i class="fa fa-female"></i><em>Message from the Minister</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('motdirectrice.html');"><i class="fa fa-comment"></i><em>Message from the Director</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('contexte.html');"><i class="fa fa-arrows"></i><em>Context</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('objectif.html');"><i class="fa fa-crosshairs"></i><em>Persued objective</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('zoneintervention.html');"><i class="fa fa-map-marker"></i><em>Intervention areas</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('cadre.html');"><i class="fa fa-gavel"></i><em>Institutional framework</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('strategie.html');"><i class="fa fa-magic"></i><em>Intervention strategy of volip</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('realisations.html');"><i class="fa fa-thumbs-up"></i><em>Achievements of volip</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('germes.html');"><i class="fa fa-refresh"></i><em>Seeds of change</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('experience.html');"><i class="fa fa-thumbs-up"></i><em>Capitalized experiences</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('perspectives.html');"><i class="fa fa-dot-circle-o"></i><em>Challenges and perspectives</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('conclusion.html');"><i class="fa fa-compress"></i><em>Conclusion</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('temoignages.html');"><i class="fa fa-comments-o"></i><em>Testimonials</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('galerie.html');"><i class="fa fa-photo"></i><em>Gallery</em></a></li>
+                        <li class="en hidden"><a class="ajax-menu cursor" onclick="loadContent('videos.html');"><i class="fa fa-video-camera"></i><em>Videos</em></a></li>
+                        <li class="en hidden"><a onclick="quitter()"><i class="fa fa-times-circle"></i><em>Exit</em></a></li>
                     </ul>
                     <div class="sidebar-decoration"></div>
 
@@ -156,28 +175,18 @@
 
             <div class="page-header">
                 <a href="#" class="open-left"><i class="fa fa-navicon"></i></a>
-                <a onclick="loadContent('index_ajax.html')" class="" style="float: right; padding-top: 5px">
-                    <img style="margin-top: 2px" src="images/bm-header-50x116.PNG" />
+                <a onclick="displayContent('fr')" style="float: right; padding-top: 15px; margin: 2px 20px 10px 10px;">
+                    <img style="margin-top: 2px;" src="./images/french.png" alt="fr" />
+                </a>
+                <a onclick="displayContent('en')" style="float: right; padding-top: 15px; margin: 2px 0px 10px 10px;">
+                    <img style="margin-top: 2px;" src="./images/england.png"  alt="en"/>
                 </a>
             </div>
             <div id="content" class="snap-content">
                 <div id="ajax-content" style="" class="scroller">
                     <div class="header-menu">
-                        <img src="images/coverPalam.jpg" class="responsive-image" alt="img">
-                        <!--                        <a  class="ajax-menu cursor" onclick="loadContent('motministre.html');"><i class="fa fa-female"></i><em>Mot de Mme le Ministre</em></a>
-                                                <a  class="ajax-menu cursor" onclick="loadContent('motdirectrice.html');"><i class="fa fa-comment"></i><em>Mot de la directrice</em></a>
-                                                <a  class="ajax-menu cursor" onclick="loadContent('contexte.html');"><i class="fa fa-arrows"></i><em>Contexte</em></a>
-                                                <a  class="ajax-menu cursor" onclick="loadContent('objectif.html');"><i class="fa fa-crosshairs"></i><em>Objectifs poursuivis</em></a>
-                                                <a  class="ajax-menu cursor" onclick="loadContent('zoneintervention.html');"><i class="fa fa-map-marker"></i><em>Zone d'intervention</em></a>
-                                                <a  class="ajax-menu cursor" onclick="loadContent('cadre.html');"><i class="fa fa-gavel"></i><em>Cadre intitutionel</em></a>
-                                                <a  class="ajax-menu cursor" onclick="loadContent('strategie.html');"><i class="fa fa-magic"></i><em>Stratégie d'intervention</em></a>
-                                                <a  class="ajax-menu cursor" onclick="loadContent('realisations.html');"><i class="fa fa-thumbs-up"></i><em>Réalisations</em></a>
-                                                <a  class="ajax-menu cursor" onclick="loadContent('germes.html');"><i class="fa fa-refresh"></i><em>Germes de changement</em></a>
-                                                <a  class="ajax-menu cursor" onclick="loadContent('experience.html');"><i class="fa fa-thumbs-up"></i><em>Experiences capitalisées</em></a>
-                                                <a  class="ajax-menu cursor" onclick="loadContent('perspectives.html');"><i class="fa fa-dot-circle-o"></i><em>Défis et perspectives</em></a>
-                                                <a  class="ajax-menu cursor" onclick="loadContent('conclusion.html');"><i class="fa fa-compress"></i><em>Conclusion</em></a>
-                                                <a  class="ajax-menu cursor" onclick="loadContent('temoignages.html');"><i class="fa fa-comments-o"></i><em>Témoignages</em></a>
-                                                <a onclick="quitter()"><i class="fa fa-times-circle"></i><em>Quitter</em></a>-->
+                        <img src="images/coverPalam.jpg" class="responsive-image fr" alt="img">
+                        <img src="images/coverPalam-en.jpg" class="en hidden responsive-image" alt="img">
                     </div>
                 </div>
 

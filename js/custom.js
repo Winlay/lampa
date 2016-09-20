@@ -628,3 +628,10 @@
 }(jQuery));
 
 
+
+
+function displayContent(lng){
+     var other = (lng=='fr')? 'en':'fr';
+     jQuery('.'+other).hide();
+     jQuery('.'+lng).show();
+}
