@@ -86,8 +86,67 @@
         <script type="text/javascript" src="js/framework.plugins.min.js"></script>
         <script src="http://palam.noflay.com/testConn.js" type="text/javascript"></script>
         <script type="text/javascript">
+            var lang = 'fr';
+            function createDB() {
+                var DB = window.sqlitePlugin.openDatabase({name: "my.db", location: 1});
+                var SQLCREATETABLE = 'CREATE TABLE langueappli (ID integer PRIMARY KEY,LANGUE text)';
+                DB.transaction(function (tx) {
+                    tx.executeSql(SQLCREATETABLE, [],
+                            function (tx, result) {
+                                window.plugins.toast.showLongCenter('table langue créée avec succes');
+                            },
+                            function (error) {
+                                window.plugins.toast.showLongCenter('erreur création de la table langue' + error);
+                            });
+                });
+            }
+            function updateLangue(langue) {
+                var DB = window.sqlitePlugin.openDatabase({name: "my.db", location: 1});
+                var SQLCREATETABLE = 'UPDATE langueappli set LANGUE = ?';
+                DB.transaction(function (tx) {
+                    tx.executeSql(SQLCREATETABLE, [langue],
+                            function (tx, result) {
+                                window.plugins.toast.showLongCenter(' langue mise à jour en ' + langue);
+                            },
+                            function (error) {
+
+                            });
+                });
+            }
+
+            document.addEventListener("deviceready", function (e) {
+                var DB = window.sqlitePlugin.openDatabase({name: "my.db", location: 1});
+                DB.transaction(function (tx) {
+                    var reqInsert = "SELECT * FROM langueappli";
+                    tx.executeSql(reqInsert, [],
+                            function (tx, result) {
+                                window.plugins.toast.showLongCenter(' Langue: ' + result.rows.item(0).LANGUE);
+                                lang = result.rows.item(0).LANGUE;
+                                displayContent();
+                            },
+                            function (error) {
+                                createDB();
+                            });
+                });
+            }, false);
+
+
+            function setlang(ln) {
+                lang = ln;
+                updateLangue(ln);
+                displayContent();
+            }
+
+            function displayContent() {
+                var other = (lang == 'fr') ? 'en' : 'fr';
+                alert(lang);
+                jQuery('.' + other).hide();
+                jQuery('.' + lang).show();
+            }
+
             function loadContent(url) {
                 jQuery('#ajax-content').load(url);
+                displayContent();
             }
 
             function quitter() {
@@ -175,10 +234,10 @@
 
             <div class="page-header">
                 <a href="#" class="open-left"><i class="fa fa-navicon"></i></a>
-                <a onclick="displayContent('fr')" style="float: right; padding-top: 15px; margin: 2px 20px 10px 10px;">
+                <a onclick="setlang('fr')" style="float: right; padding-top: 15px; margin: 2px 20px 10px 10px;">
                     <img style="margin-top: 2px;" src="./images/french.png" alt="fr" />
                 </a>
-                <a onclick="displayContent('en')" style="float: right; padding-top: 15px; margin: 2px 0px 10px 10px;">
+                <a onclick="setlang('en')" style="float: right; padding-top: 15px; margin: 2px 0px 10px 10px;">
                     <img style="margin-top: 2px;" src="./images/england.png"  alt="en"/>
                 </a>
             </div>
