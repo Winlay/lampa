@@ -100,11 +100,12 @@
                             });
                 });
             }
+            
             function updateLangue(langue) {
                 var DB = window.sqlitePlugin.openDatabase({name: "my.db", location: 1});
-                var SQLCREATETABLE = 'UPDATE langueappli set LANGUE = ?';
+                var SQLUPDATE = 'UPDATE langueappli set LANGUE = ?';
                 DB.transaction(function (tx) {
-                    tx.executeSql(SQLCREATETABLE, [langue],
+                    tx.executeSql(SQLUPDATE, [langue],
                             function (tx, result) {
                                 window.plugins.toast.showLongCenter(' langue mise à jour en ' + langue);
                             },
@@ -157,25 +158,9 @@
             }
 
             document.addEventListener("backbutton", function (e) {
-                loadContent('index_ajax.html');
+                quitter();
             }, false);
 
-
-
-            function callPhoneDialer(number) {
-                phonedialer.dial(
-                        number,
-                        function (err) {
-                            if (err == "empty")
-                                alert("Erreur téléphone");
-                            else
-                                alert("Dialer Error:" + err + "->" + number);
-                        },
-                        function (success) {
-                            // alert(number);
-                        }
-                );
-            }
         </script>
 
 
