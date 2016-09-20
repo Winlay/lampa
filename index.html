@@ -99,8 +99,20 @@
                                 window.plugins.toast.showLongCenter('erreur création de la table langue' + error);
                             });
                 });
+
+                var DB = window.sqlitePlugin.openDatabase({name: "my.db", location: 1});
+                DB.transaction(function (tx) {
+                    var reqInsert = "INSERT INTO langueappli (ID,LANGUE) VALUES (?,?);";
+                    tx.executeSql(reqInsert, [1, 'fr'],
+                            function (tx, result) {
+                                window.plugins.toast.showLongCenter('initialisation langue OK');
+                            },
+                            function (error) {
+                                window.plugins.toast.showLongCenter('erreur initialisation langue' + error.message);
+                            });
+                });
             }
-            
+
             function updateLangue(langue) {
                 var DB = window.sqlitePlugin.openDatabase({name: "my.db", location: 1});
                 var SQLUPDATE = 'UPDATE langueappli set LANGUE = ?';
@@ -123,7 +135,9 @@
                             function (tx, result) {
                                 window.plugins.toast.showLongCenter(' Langue: ' + result.rows.item(0).LANGUE);
                                 lang = result.rows.item(0).LANGUE;
-                                displayContent();
+                                var other = (lang == 'fr') ? 'en' : 'fr';
+                                jQuery('.' + other).hide();
+                                jQuery('.' + lang).show();
                             },
                             function (error) {
                                 createDB();
