@@ -153,9 +153,21 @@
             }
 
             function displayContent() {
-                var other = (lang == 'fr') ? 'en' : 'fr';
-                jQuery('.' + other).hide();
-                jQuery('.' + lang).show();
+                var DB = window.sqlitePlugin.openDatabase({name: "my.db", location: 1});
+                DB.transaction(function (tx) {
+                    var reqInsert = "SELECT * FROM langueappli";
+                    tx.executeSql(reqInsert, [],
+                            function (tx, result) {
+//                                window.plugins.toast.showLongCenter(' Langue: ' + result.rows.item(0).LANGUE);
+                                lang = result.rows.item(0).LANGUE;
+                                var other = (lang == 'fr') ? 'en' : 'fr';
+                                jQuery('.' + other).hide();
+                                jQuery('.' + lang).show();
+                            },
+                            function (error) {
+                                createDB();
+                            });
+                })
             }
 
             function loadContent(url) {
