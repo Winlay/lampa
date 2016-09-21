@@ -67,4 +67,7 @@
                           android:largeScreens="true"
                           android:xlargeScreens="true" />
     </platform>
+    <platform name="ios">
+        
+    </platform>
 </widget>
