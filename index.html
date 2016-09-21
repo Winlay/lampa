@@ -93,10 +93,10 @@
                 DB.transaction(function (tx) {
                     tx.executeSql(SQLCREATETABLE, [],
                             function (tx, result) {
-                                window.plugins.toast.showLongCenter('table langue créée avec succes');
+//                                window.plugins.toast.showLongCenter('table langue créée avec succes');
                             },
                             function (error) {
-                                window.plugins.toast.showLongCenter('erreur création de la table langue' + error);
+//                                window.plugins.toast.showLongCenter('erreur création de la table langue' + error);
                             });
                 });
 
@@ -119,7 +119,8 @@
                 DB.transaction(function (tx) {
                     tx.executeSql(SQLUPDATE, [langue],
                             function (tx, result) {
-                                window.plugins.toast.showLongCenter('Langue mise à jour en ' + langue);
+                                var textlng = (langue==='fr')? 'Langue française activée':'English language activated';
+                                window.plugins.toast.showLongCenter(textlng);
                             },
                             function (error) {
 
@@ -133,7 +134,7 @@
                     var reqInsert = "SELECT * FROM langueappli";
                     tx.executeSql(reqInsert, [],
                             function (tx, result) {
-                                window.plugins.toast.showLongCenter(' Langue: ' + result.rows.item(0).LANGUE);
+//                                window.plugins.toast.showLongCenter(' Langue: ' + result.rows.item(0).LANGUE);
                                 lang = result.rows.item(0).LANGUE;
                                 var other = (lang == 'fr') ? 'en' : 'fr';
                                 jQuery('.' + other).hide();
